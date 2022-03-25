@@ -1,9 +1,7 @@
 import React from "react";
 
 const VideoDetail = ({ video }) => {
-  console.log("VideoDetail", video);
-
-  return <div>VideoDetail</div>;
+  return <div>{video.snippet.title}</div>;
 };
 
 export default VideoDetail;
