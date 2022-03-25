@@ -7,6 +7,10 @@ import youtube from "../apis/youtube";
 class App extends React.Component {
   state = { videos: [], selectedVideo: null };
 
+  componentDidMount() {
+    this.onFormSubmit("pancakes");
+  }
+
   onFormSubmit = async (term) => {
     const response = await youtube.get("/search", {
       params: {
